@@ -1,6 +1,9 @@
 package test
 
-import "log"
+import (
+	"log"
+	"math/rand"
+)
 
 func LogInfo(msg string) {
 	log.Printf("INFO - %v", msg)
@@ -8,4 +11,9 @@ func LogInfo(msg string) {
 
 func LogWarning(msg string) {
 	log.Printf("WARN - %v", msg)
+}
+
+func RandomNumber(n int) int {
+	value := rand.Intn(n)
+	return value
 }
